@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd"> 
+
+    <changeSet author="robert" id="firstset-1" context="model">
+        <createTable  tableName="BOOK">
+            <column name="ID" type="NUMERIC(19,0)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK__BOOK"/>
+            </column>
+            <column name="ISBN" type="NUMERIC(19,0)"/>
+            <column name="TITLE" type="VARCHAR(255)"/>
+            <column name="BOOKSHELF_ID" type="NUMERIC(19,0)"/>
+        </createTable>
+		
+		 <createTable  tableName="BOOKSHELF">
+            <column name="ID" type="NUMERIC(19,0)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK__BOOKSHELF"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)"/>
+        </createTable>
+		
+		<addForeignKeyConstraint baseColumnNames="BOOKSHELF_ID" 
+		baseTableName="BOOK"
+		constraintName="FK_BOOK_BOOKSHELF_ID" 
+		deferrable="false" 
+		initiallyDeferred="false" 
+		onDelete="NO ACTION" 
+		onUpdate="NO ACTION" 
+		referencedColumnNames="ID" 
+		referencedTableName="BOOKSHELF"
+		referencesUniqueColumn="false"/>
+    
+	</changeSet>
+</databaseChangeLog>

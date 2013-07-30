@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd"> 
+
+	<changeSet id="first-data" author="Robert" context="data">
+		<insert  tableName="BOOKSHELF">
+			<column name="ID" value="1"/>
+			<column name="NAME" value="Bokhyllan"/>
+		</insert>
+	
+		<insert  tableName="BOOK">
+			<column name="ID" value="1"/>
+			<column name="ISBN" value="123456789"/>
+            <column name="TITLE" value="JavaScript: The Good Parts"/>
+            <column name="BOOKSHELF_ID" value="1"/>
+        </insert>
+		
+		<insert  tableName="BOOK">
+			<column name="ID" value="2"/>
+			<column name="ISBN" value="91011121314"/>
+            <column name="TITLE" value="Java direkt med Swing"/>
+            <column name="BOOKSHELF_ID" value="1"/>
+        </insert>
+		
+	</changeSet>
+</databaseChangeLog>

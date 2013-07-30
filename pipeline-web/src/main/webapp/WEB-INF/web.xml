@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	Version="2.4">
+
+	<servlet>
+		<servlet-name>Book</servlet-name>
+		<servlet-class>se.hiq.hicollege.web.BookSelect</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>EmailBookReminder</servlet-name>
+		<servlet-class>se.hiq.hicollege.web.mail.EmailBookReminder
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Book</servlet-name>
+		<url-pattern>/SelectBook.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EmailBookReminder</servlet-name>
+		<url-pattern>/EmailBook.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Pipeline REST Service</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer
+		</servlet-class>
+		<init-param>
+			<param-value>se.hiq.hicollege.web.api.BookSelectREST</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Pipeline REST Service</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+
+</web-app> 

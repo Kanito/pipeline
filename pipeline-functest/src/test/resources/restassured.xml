@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restAssured>
+	<config>
+		<port>8080</port>
+		<baseURI>http://localhost</baseURI>
+		<basePath>/pipeline/rest</basePath>
+	</config>
+</restAssured>
