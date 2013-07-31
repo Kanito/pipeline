@@ -6,6 +6,6 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd"> 
 
 	<changeSet id="version2-0" author="Robert" context="model">
-		<modifyDataType  tableName="BOOK" columnName="ISBN" newDataType="NUMERIC(20,0)"/>			
+		<modifyDataType  tableName="BOOK" columnName="ISBN" newDataType="BIGINT"/>			
 	</changeSet>
 </databaseChangeLog>

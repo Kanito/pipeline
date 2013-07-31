@@ -218,11 +218,11 @@
 			</dependency>
 			<!-- ##### SYSTEM SCOPE, (Add dependency from filesystem ) ##### -->
 			<dependency>
-				<groupId>com.microsoft.sqlserver</groupId>
-				<artifactId>sqljdbc4</artifactId>
-				<version>4.0</version>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.6</version>
 				<scope>system</scope>
-				<systemPath>${pipeline.root.path}/system-dep/sqljdbc4.jar</systemPath>
+				<systemPath>${pipeline.root.path}/system-dep/mysql-connector-java-5.0.8-bin.jar</systemPath>
 			</dependency>
 
 		</dependencies>
