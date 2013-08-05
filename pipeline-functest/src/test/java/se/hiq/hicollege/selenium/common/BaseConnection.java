@@ -43,7 +43,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 		SCREENSHOT_FILEPATH ="c:\\screenshots\\";
 		SELENIUM_TARGET_BROWSER="firefox";
 		SELENIUM_HUB_URL = "http://localhost:4444/wd/hub";
-		TARGET_SERVER_URL = "http://localhost:8081/";		
+		TARGET_SERVER_URL = "http://localhost:8181/";		
 		
 		seleniumConfig = new SeleniumDriverConfigs(SELENIUM_TARGET_BROWSER);		
 	}
