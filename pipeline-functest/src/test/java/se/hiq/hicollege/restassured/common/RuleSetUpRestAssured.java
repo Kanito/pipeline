@@ -51,4 +51,4 @@ public class RuleSetUpRestAssured extends TestWatcher {
 		super.finished(description);
 	}
 }
-s
+
