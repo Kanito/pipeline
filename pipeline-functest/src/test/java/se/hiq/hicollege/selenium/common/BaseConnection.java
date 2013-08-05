@@ -22,12 +22,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 	
 	public BaseConnection(){
 		
-		/*
+		
 		//Default values
-		SCREENSHOT_FILEPATH ="";
+		SCREENSHOT_FILEPATH ="c:\\screenshots\\";
 		SELENIUM_TARGET_BROWSER="firefox";
-		SELENIUM_HUB_URL = "Enter selenium hub http://yourIp:4444/wd/hub";
-		TARGET_SERVER_URL = "Enter site to test in test.target.server.url";
+		SELENIUM_HUB_URL = "http://localhost:4444/wd/hub";
+		TARGET_SERVER_URL = "http://localhost:8181/";
 		
 		String sysHub = System.getProperty("test.selenium.hub.url");
 		String sysTarget = System.getProperty("test.target.server.url");
@@ -38,12 +38,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 		if(sysTarget!=null)TARGET_SERVER_URL = sysTarget;
 		if(sysScreenshotFilepath!=null)SCREENSHOT_FILEPATH = sysScreenshotFilepath;		
 		if(sysBrowser!=null)SELENIUM_TARGET_BROWSER=sysBrowser;
-		*/
 		
-		SCREENSHOT_FILEPATH ="c:\\screenshots\\";
-		SELENIUM_TARGET_BROWSER="firefox";
-		SELENIUM_HUB_URL = "http://localhost:4444/wd/hub";
-		TARGET_SERVER_URL = "http://localhost:8181/";		
+		
+
 		
 		seleniumConfig = new SeleniumDriverConfigs(SELENIUM_TARGET_BROWSER);		
 	}

@@ -28,14 +28,13 @@ public class RuleSetUpRestAssured extends TestWatcher {
 			log.info(config.getString("config.basePath"));
 			log.info(""+config.getInt("config.port"));
 			
-			
 			} catch (ConfigurationException e) {
 			log.error("failed to load xml propertyfile for restassured",e);
 		}
 		
-		RestAssured.baseURI = "http://localhost";
-		RestAssured.basePath="/pipeline/rest";
-		RestAssured.port = 8081;
+		RestAssured.baseURI = config.getString("config.baseURI");
+		RestAssured.basePath=config.getString("config.basePath");
+		RestAssured.port = config.getInt("config.port");
 		super.starting(description);
 	}
 
