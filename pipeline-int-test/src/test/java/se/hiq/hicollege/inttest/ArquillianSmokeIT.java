@@ -38,7 +38,7 @@ public class ArquillianSmokeIT {
 	@Test @RunAsClient
 	public void should_create_greeting() throws IOException {
 		System.out.println(deploymentUrl);
-		Document document = Jsoup.parse(deploymentUrl, 1000);
+		Document document = Jsoup.parse(deploymentUrl, 5000);
 		System.out.println(document.getAllElements().toString());
 		
 		assertThat("Element from page",document.getElementById("titleId").attr("name"), is("title"));
