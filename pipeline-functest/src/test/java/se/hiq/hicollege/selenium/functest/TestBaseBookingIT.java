@@ -24,7 +24,6 @@ import se.hiq.hicollege.selenium.pageobjects.BasicBookingPage;
  * 
  * 
  */
-@Ignore
 public class TestBaseBookingIT extends BaseConnection {
 	String STARTPAGE = "pipeline";
 	
